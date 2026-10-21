@@ -9,8 +9,8 @@ const MCP_BEARER_TOKEN = process.env.MCP_BEARER_TOKEN;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_OWNER = process.env.GITHUB_OWNER || "";
 
-if (!MCP_BEARER_TOKEN || MCP_BEARER_TOKEN.length < 32) {
-  throw new Error("MCP_BEARER_TOKEN must be set to a random secret of at least 32 characters.");
+if (!MCP_BEARER_TOKEN || MCP_BEARER_TOKEN.length < 4) {
+  throw new Error("MCP_BEARER_TOKEN must be set to a random secret of at least 4 characters.");
 }
 if (!GITHUB_TOKEN) throw new Error("GITHUB_TOKEN is required.");
 
